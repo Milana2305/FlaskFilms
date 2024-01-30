@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Фильм{% endblock %}
+
+{% block main %}
+  <div class="Information">
+        <div class="Information_img">
+            <img src="/static/img/{{ cards[3].img }}" alt="Тут должна быть картинка">
+        </div>
+        <div class="Information_text">
+            <h3> {{ cards[3].nameFilm }}</h3>
+            <p> Год производства: {{ cards[3].year }}</p>
+            <p> Страна: {{ cards[3].country }}</p>
+            <p> Жанр: {{ cards[3].genre }}</p>
+            <p> Премьера: {{ cards[3].premiere }}</p>
+            <p> Возраст: {{ cards[3].age }}</p>
+            <p class="obzor"> {{ cards[3].review }}</p>
+            <div class="return_button">
+            <div class="return_button">
+                <a href="http://127.0.0.1:5000/index">Вернуться на главную</a>
+            </div>
+        </div>
+  </div>
+{% endblock %}

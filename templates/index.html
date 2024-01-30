@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block main %}
+  <div id="cards">
+    {% for c in cards %}
+        <div class="film_card">
+            <div class="card_img">
+                <a href="/film/{{c.id}}"><img src="/static/img/{{ c.img }}" alt="Тут должна быть картинка"></a>
+            </div>
+            <div class="card_text">
+                <h3> {{ c.nameFilm }}</h3>
+                <p> Год производства: {{ c.year }}</p>
+                <p> Страна: {{ c.country }}</p>
+                <p> Жанр: {{ c.genre }}</p>
+                <p> Премьера: {{ c.premiere }}</p>
+                <p> Возраст: {{ c.age }}</p>
+            </div>
+        </div>
+    {% endfor %}
+  </div>
+{% endblock %}
+

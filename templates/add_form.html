@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %} Добавление книги {% endblock %}
+
+{% block main %}
+    <form action="" method="post" class="add_form">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.nameFilm.label() }} {{ form.nameFilm()}}
+        </div>
+        <div>
+            {{ form.year.label() }} {{ form.year()}}
+        </div>
+        <div>
+            {{ form.country.label() }} {{ form.country()}}
+        </div>
+        <div>
+            {{ form.genre.label() }} {{ form.genre()}}
+        </div>
+        <div>
+            {{ form.premiere.label() }} {{ form.premiere()}}
+        </div>
+        <div>
+            {{ form.age.label() }} {{ form.age()}}
+        </div>
+        <div>
+            {{ form.review.label() }} {{ form.review()}}
+        </div>
+        <div>
+            {{ form.img.label() }} {{ form.img()}}
+        </div>
+        <div class="add_film">
+            {{ form.sub() }}
+        </div>
+    </form>
+{% endblock %}
